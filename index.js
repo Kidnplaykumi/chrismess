@@ -1,6 +1,10 @@
-const button = document.querySelector('button')
-const changeParagraph = function() {
+const form = document.querySelector('form')
+var input =  document.getElementById("life").value;
+const changeParagraph = function(text) {
+    console.log("Hello")
     const h2 = document.querySelector('h2.H2')
-    h2.textContent = 'Kumi has a nice style'
+    //sdocument.getElementById("life").value;
+    h2.textContent = text 
+    
   }
-  button.addEventListener('click', changeParagraph)
+  form.addEventListener('submit', changeParagraph)

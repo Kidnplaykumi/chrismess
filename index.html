@@ -13,8 +13,16 @@
     <h3>Playboi Carti</h3>
     <h4>Virgil Abloh</h4>
 
-    <button>Change Heading</button>
+    <form id="form1" onsubmit="return false">
+            Enter New Heading:<br>    
+            <input id = "life"  type="text"><br>
+            <button type="button" value="Submit" onclick="changeParagraph(document.getElementById('life').value)">Submit</button>
+            <!-- <input type="submit" value="Submit"> -->
+    </form>
+    
+    <!-- <output form="form1" class = "Output"></output> -->
 
     <script src="index.js"></script>
 </body>
+
 </html>
