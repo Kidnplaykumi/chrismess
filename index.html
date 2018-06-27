@@ -13,23 +13,30 @@
     <h3>Playboi Carti</h3>
     <h4>Virgil Abloh</h4>
 
-    <form id="form1" onsubmit="return false">
-            Enter New Heading:<br>    
-            <input id = "life"  type="text"><br>
-            <input type="submit" style="display: none" />
-            <button id = "myBtn"type="button" value="Submit" onclick="changeParagraph(document.getElementById('life').value)">Submit</button>
+    <form id="form1">
+            Enter 'Chris' Movie:<br>    
+            <input 
+                name="life"  
+                type="text" 
+                autofocus 
+                placeholder="Enter a flick"
+            >
+            <button type="submit">Update Actor</button>
     </form>
-    <script>
-            var input = document.getElementById("life");
-            input.addEventListener("keyup", function(event) {
-                event.preventDefault();
-                if (event.keyCode === 13) {
-                    document.getElementById("myBtn").click();
-                }
-            });
-    </script>
-    
-   
+
+    <form id="form2">
+        Enter 'Hip-Hop' Artist:<br>
+        <input 
+            name="life2" 
+            type="text" 
+            placeholder="Enter Favorite rapper"
+        >
+        <button type="submit">Update Artist</button>
+
+    </form>
+
+    <ul id = "flicks"></ul>
+    <ul id ="flicks2"></ul>
 
     <script src="index.js"></script>
     
