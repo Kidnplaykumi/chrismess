@@ -1,13 +1,46 @@
-const form = document.querySelector('form#form1')
-const form2 = document.querySelector('form#form2')
+class App {
+  constructor() {
+    const form = document.querySelector('form#flickForm')
+    form.addEventListener('submit', (ev) => {
+      ev.preventDefault()
+      this.handleSubmit(ev)
+    })
+  }
 
-const listOfMovie = function(ev) {
+renderProperty(name, value) {
+  const span = document.createElement('span')
+  span.classList.add(name)
+  span.textContent = value
+  return span
+}
+
+renderItem(flick) {
+  const item = document.createElement('li')
+  item.classList.add('flick')
+
+  const properties = Object.keys(flick)
+
+  properties.forEach((propertyName) => {
+    const span = this.renderProperty(propertyName, flick[propertyName])
+    item.appendChild(span)
+  })
+
+  return item
+}
+
+handleSubmit(ev) {
     ev.preventDefault()
     const f = ev.target
+
+    const flick = {
+      name: f.life.value,
+      chris: f.life2.value,
+    }
+
+    this.flicks.push(flick)
+    console.log(flick)
     
-    const life = f.life.value;
-    const item = document.createElement('li')
-    item.textContent = life
+    const item = this.renderItem(flick)
     
 
     const list = document.querySelector('#flicks')
@@ -15,25 +48,6 @@ const listOfMovie = function(ev) {
 
     f.reset() 
   }
-
-
-const listOfArtist = function(ev){
-  ev.preventDefault()
-  const a = ev.target
-  
-  const life2 = a.life2.value;
-  
-  const item2 = document.createElement('li')
-  
-  item2.textContent = life2
-  console.log(item2)
-
-  const list2 = document.querySelector('#flicks2')
-  list2.appendChild(item2)
-
-  a.reset()
 }
 
-  
-  form.addEventListener('submit', listOfMovie)
-  form2.addEventListener('submit', listOfArtist)
+  const app = new App()

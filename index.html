@@ -8,37 +8,72 @@
     <link rel="stylesheet" type="text/css" media="screen" href="index.css" />
 </head>
 <body>
-    <h1>Chrismess</h1>
-    <h2 class = 'H2'>Kumi</h2>
-    <h3>Playboi Carti</h3>
-    <h4>Virgil Abloh</h4>
+    <header>
+        <h1>Chrismess</h1>
+        <h3>Playboi Carti</h3>
+        <h4>Virgil Abloh</h4>
+    </header>
 
-    <form id="form1">
-            Enter 'Chris' Movie:<br>    
+    <form>
+        <div class="justTesting seriously">  
             <input 
                 name="life"  
+                id ="life_1"
                 type="text" 
-                autofocus 
                 placeholder="Enter a flick"
+                autofocus 
             >
-            <button type="submit">Update Actor</button>
+            <input 
+                name="life2" 
+                id ="life_2"
+                type="text" 
+                placeholder="Enter Favorite rapper"
+            >
+            <button type="submit">Go!</button>
+        </div>
     </form>
-
-    <form id="form2">
-        Enter 'Hip-Hop' Artist:<br>
-        <input 
-            name="life2" 
-            type="text" 
-            placeholder="Enter Favorite rapper"
-        >
-        <button type="submit">Update Artist</button>
-
-    </form>
-
     <ul id = "flicks"></ul>
-    <ul id ="flicks2"></ul>
-
     <script src="index.js"></script>
+
+    <script>
+//         (function()){
+//             var flicks = document.querySelector('#flicks'),
+//                 form = document.querySelector('form#form1'),
+//                 field = document.querySelector('#life')
+//                 // field2 = document.querySelector('#life2');
+//             form.addEventListener('submit', function(ev));{
+//                 var text = field.value;
+//                 if (text!== '') {
+//                     todo.innerHTML += '<li>' + text + ' <button onclick="Delete(this);">Delete</button> </li>';
+//                     field.value = '';
+//                 }
+//                 ev.preventDefault();
+//             }, false);
+//         })();
+//         function Delete(currentEl){
+//   currentEl.parentNode.parentNode.removeChild(currentEl.parentNode);
+//   }
+// (function(){
+
+// var flicks = document.querySelector( '#flicks' ),
+//     form = document.querySelector( 'form' ),
+//     field = document.querySelector( '#life_1' ),
+//     field2 = document.querySelector('#life_2')
     
+  
+// form.addEventListener( 'submit', function( ev ) {
+//   var text = field.value;
+//   if ( text !== '' ) {
+//     flicks.innerHTML += '<li>' + text + ' <button onclick="Delete(this);">Delete</button> </li>';
+//     field.value = '';
+//     //field.focus();
+//   }
+//   ev.preventDefault();
+// }, false);
+// })();
+// function Delete(currentEl){
+//   currentEl.parentNode.parentNode.removeChild(currentEl.parentNode);
+// }
+    </script>
 </body>
 </html>
