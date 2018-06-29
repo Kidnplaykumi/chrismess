@@ -6,7 +6,7 @@ class App {
       this.handleSubmit(ev)
     })
   }
-
+  
 renderProperty(name, value) {
   const span = document.createElement('span')
   span.classList.add(name)
